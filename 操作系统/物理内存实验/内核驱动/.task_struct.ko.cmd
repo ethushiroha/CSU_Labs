@@ -1,0 +1,1 @@
+cmd_/home/shiroha/os/x/task_struct.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/shiroha/os/x/task_struct.ko /home/shiroha/os/x/task_struct.o /home/shiroha/os/x/task_struct.mod.o ;  true
