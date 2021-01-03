@@ -1,9 +1,9 @@
-# caCSU_OS
+# CSU_OS
 操作系统的实验
 
 
 
-# Access_Physical
+# 工具
 
 是某大神写的一个一个开源的项目，包括`dram` 和 `fileview`，可以直接查看物理内存，很暴力
 
@@ -24,7 +24,7 @@ Linux ubuntu 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 18:03:48 UTC 20
 
 
 
-# task
+# 内核驱动
 
 用来获得进程的相关信息，便于查找页表等数据
 
