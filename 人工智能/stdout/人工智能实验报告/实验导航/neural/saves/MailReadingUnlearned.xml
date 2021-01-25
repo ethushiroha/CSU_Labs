@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<MLDBIF>
+<DB>
+
+<!-- Neural Network Definition -->
+<NETWORK>
+
+   <!-- Node Definitions -->
+
+   <NODE>
+      <NAME>Known</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-201.50006</XPOS>
+      <YPOS>-151.87506</YPOS>
+      <INDEX>0</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>New</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-139.8296</XPOS>
+      <YPOS>-193.29553</YPOS>
+      <INDEX>1</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Short</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>143.67053</XPOS>
+      <YPOS>-192.37508</YPOS>
+      <INDEX>2</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Home</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>203.50005</XPOS>
+      <YPOS>-147.27278</YPOS>
+      <INDEX>3</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Hidden 1</NAME>
+      <WEIGHT>0.4034827767058067</WEIGHT>
+      <XPOS>100.409134</XPOS>
+      <YPOS>65.3523</YPOS>
+      <INDEX>4</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Hidden 2</NAME>
+      <WEIGHT>0.9839143185225945</WEIGHT>
+      <XPOS>-103.011406</XPOS>
+      <YPOS>66.27275</YPOS>
+      <INDEX>5</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Reads</NAME>
+      <WEIGHT>-0.9409523641776449</WEIGHT>
+      <XPOS>0.07953876</XPOS>
+      <YPOS>193.29553</YPOS>
+      <INDEX>6</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+
+   <!-- Edge Definitions -->
+
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>-0.8904397105683544</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>0.33371585559813677</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.7378066405249788</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.9919410477771367</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>2</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.8997093739810846</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>2</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>0.08169197934137107</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>3</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>-0.9101648093276773</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>3</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.9875534835615503</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>4</STARTINDEX>
+      <ENDINDEX>6</ENDINDEX>
+      <WEIGHT>-0.3722429271630381</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>5</STARTINDEX>
+      <ENDINDEX>6</ENDINDEX>
+      <WEIGHT>0.41223067500226707</WEIGHT>
+   </EDGE>
+
+</NETWORK>
+
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type="input">Known</PARAMETER>
+   <PARAMETER type="input">New</PARAMETER>
+   <PARAMETER type="input">Short</PARAMETER>
+   <PARAMETER type="input">Home</PARAMETER>
+   <PARAMETER type="output">Reads</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+</DB>
+</MLDBIF>
+
+

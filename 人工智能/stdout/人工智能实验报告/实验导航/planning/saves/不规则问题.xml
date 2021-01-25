@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+
+<PPIF version="0.01">
+<Problem>
+<Name>²»¹æÔòÎÊÌâ.xml</Name>
+<Domain>BlockWorld</Domain>
+
+
+<!-- Initial State Description -->
+<InitialState>
+	<LogicProgram>
+		empty.
+		ontable(Ä¾¿é1).
+		on(Ä¾¿é2, Ä¾¿é1).
+		clear(Ä¾¿é3).
+		on(Ä¾¿é3,  Ä¾¿é1).
+		ontable(Ä¾¿é2).
+		clear(Ä¾¿é2).
+	</LogicProgram>
+
+	<!-- Block Display Information -->
+	<BlockWorld>
+		<Block name=" Ä¾¿é1" colour="red" column="0" stackHeight="0"></Block>
+		<Block name="Ä¾¿é2" colour="red" column="1" stackHeight="0"></Block>
+		<Block name="Ä¾¿é3" colour="red" column="0" stackHeight="1"></Block>
+	</BlockWorld>
+</InitialState>
+
+
+<!-- Goals -->
+<Goals>
+	<LogicProgram>
+		empty.
+		ontable(Ä¾¿é3).
+		on(Ä¾¿é2, Ä¾¿é3).
+		on(Ä¾¿é1, Ä¾¿é2).
+		clear(Ä¾¿é1).
+	</LogicProgram>
+
+	<!-- Block Display Information -->
+	<BlockWorld>
+		<Block name=" Ä¾¿é1" colour="red" column="3" stackHeight="2"></Block>
+		<Block name="Ä¾¿é2" colour="red" column="3" stackHeight="1"></Block>
+		<Block name="Ä¾¿é3" colour="red" column="3" stackHeight="0"></Block>
+	</BlockWorld>
+</Goals>
+
+
+<!-- STRIPS Actions -->
+<Action>
+	<LogicProgram>pickuptable(B1).</LogicProgram>
+	<Preconditions>
+		<LogicProgram>
+			ontable(B1).
+			clear(B1).
+			empty.
+		</LogicProgram>
+	</Preconditions>
+	<AddList>
+		<LogicProgram>
+			holding(B1).
+		</LogicProgram>
+	</AddList>
+	<DeleteList>
+		<LogicProgram>
+			empty.
+			ontable(B1).
+			clear(B1).
+		</LogicProgram>
+	</DeleteList>
+</Action>
+<Action>
+	<LogicProgram>pickup(B1,B2).</LogicProgram>
+	<Preconditions>
+		<LogicProgram>
+			on(B1, B2).
+			clear(B1).
+			empty.
+		</LogicProgram>
+	</Preconditions>
+	<AddList>
+		<LogicProgram>
+			holding(B1).
+			clear(B2).
+		</LogicProgram>
+	</AddList>
+	<DeleteList>
+		<LogicProgram>
+			empty.
+			on(B1, B2).
+			clear(B1).
+		</LogicProgram>
+	</DeleteList>
+</Action>
+<Action>
+	<LogicProgram>putdowntable(B1).</LogicProgram>
+	<Preconditions>
+		<LogicProgram>
+			holding(B1).
+		</LogicProgram>
+	</Preconditions>
+	<AddList>
+		<LogicProgram>
+			empty.
+			ontable(B1).
+			clear(B1).
+		</LogicProgram>
+	</AddList>
+	<DeleteList>
+		<LogicProgram>
+			holding(B1).
+		</LogicProgram>
+	</DeleteList>
+</Action>
+<Action>
+	<LogicProgram>putdown(B1,B2).</LogicProgram>
+	<Preconditions>
+		<LogicProgram>
+			clear(B2).
+			holding(B1).
+		</LogicProgram>
+	</Preconditions>
+	<AddList>
+		<LogicProgram>
+			empty.
+			on(B1, B2).
+			clear(B1).
+		</LogicProgram>
+	</AddList>
+	<DeleteList>
+		<LogicProgram>
+			clear(B2).
+			holding(B1).
+		</LogicProgram>
+	</DeleteList>
+</Action>
+</Problem>
+</PPIF>
+

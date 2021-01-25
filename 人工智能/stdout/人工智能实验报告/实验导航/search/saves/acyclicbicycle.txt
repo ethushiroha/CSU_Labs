@@ -1,0 +1,54 @@
+% Auto-generated on Thu Aug 29 11:43:40 PDT 2002
+
+% Nodes
+% N: index, node_name, x_position, y_position, node_type, node_heuristics;
+N: 0, al, -292.99265, -180.64886, REGULAR, 0.0;
+N: 1, mo, -166.87927, -180.64886, START, 0.0;
+N: 2, ch, -27.13203, -180.64886, REGULAR, 0.0;
+N: 3, trp, 131.92989, -180.64886, REGULAR, 0.0;
+N: 4, bb, 273.94943, -180.64886, REGULAR, 0.0;
+N: 5, wtc, -292.99265, -61.352448, REGULAR, 0.0;
+N: 6, ls, -166.87927, -61.352448, REGULAR, 0.0;
+N: 7, fs, -27.13203, -84.07558, REGULAR, 0.0;
+N: 8, ws, -27.13203, 5.680782, REGULAR, 0.0;
+N: 9, ac, 131.92989, -53.399353, REGULAR, 0.0;
+N: 10, p27, 290.9918, 9.0892515, REGULAR, 0.0;
+N: 11, slb, -214.59784, 24.99544, REGULAR, 0.0;
+N: 12, ase, -214.59784, 139.74724, REGULAR, 0.0;
+N: 13, rp, -290.7203, 139.74724, REGULAR, 0.0;
+N: 14, sec, -110.07144, 98.845604, REGULAR, 0.0;
+N: 15, bp, -24.859715, 180.64886, REGULAR, 0.0;
+N: 16, nyse, 62.62433, 98.845604, REGULAR, 0.0;
+
+% Edges
+% E: from_node_index, to_node_index, edge_cost;
+E: 0, 5, 1.0;
+E: 1, 0, 2.0;
+E: 1, 6, 5.0;
+E: 1, 8, 2.0;
+E: 1, 2, 1.0;
+E: 2, 7, 2.0;
+E: 2, 9, 4.0;
+E: 2, 3, 3.0;
+E: 3, 4, 5.0;
+E: 5, 6, 1.0;
+E: 6, 14, 2.0;
+E: 8, 7, 2.0;
+E: 8, 14, 7.0;
+E: 8, 16, 2.0;
+E: 8, 9, 4.0;
+E: 9, 3, 3.0;
+E: 9, 16, 1.0;
+E: 9, 10, 9.0;
+E: 12, 11, 1.0;
+E: 12, 13, 1.0;
+E: 14, 12, 1.0;
+E: 14, 15, 3.0;
+E: 14, 16, 1.0;
+E: 16, 15, 5.0;
+
+% Miscellaneous
+% M: predicate, value;
+M: HEURISTICS, MANUAL;
+M: COSTS, MANUAL;
+

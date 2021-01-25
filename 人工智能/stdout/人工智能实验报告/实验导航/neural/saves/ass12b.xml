@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<MLDBIF>
+<DB>
+
+<!-- Neural Network Definition -->
+<NETWORK>
+
+   <!-- Node Definitions -->
+
+   <NODE>
+      <NAME>bought</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-198.26971</XPOS>
+      <YPOS>-83.76611</YPOS>
+      <INDEX>0</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>edu</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-57.79237</XPOS>
+      <YPOS>-215.91887</YPOS>
+      <INDEX>1</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>first</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>75.400955</XPOS>
+      <YPOS>-218.00002</YPOS>
+      <INDEX>2</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>visited</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>200.26971</XPOS>
+      <YPOS>-85.84725</YPOS>
+      <INDEX>3</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>hidden 1</NAME>
+      <WEIGHT>0.3</WEIGHT>
+      <XPOS>-133.7542</XPOS>
+      <YPOS>113.94273</YPOS>
+      <INDEX>4</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>hidden</NAME>
+      <WEIGHT>0.4</WEIGHT>
+      <XPOS>153.44391</XPOS>
+      <YPOS>110.82102</YPOS>
+      <INDEX>5</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>more_info</NAME>
+      <WEIGHT>0.5</WEIGHT>
+      <XPOS>8.804293</XPOS>
+      <YPOS>218.00002</YPOS>
+      <INDEX>6</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+
+   <!-- Edge Definitions -->
+
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.1</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.2</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.3</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.4</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>2</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.5</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>2</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.6</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>3</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.7</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>3</STARTINDEX>
+      <ENDINDEX>5</ENDINDEX>
+      <WEIGHT>-0.8</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>4</STARTINDEX>
+      <ENDINDEX>6</ENDINDEX>
+      <WEIGHT>0.9</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>5</STARTINDEX>
+      <ENDINDEX>6</ENDINDEX>
+      <WEIGHT>-1.0</WEIGHT>
+   </EDGE>
+
+</NETWORK>
+
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type="input">bought</PARAMETER>
+   <PARAMETER type="input">edu</PARAMETER>
+   <PARAMETER type="input">first</PARAMETER>
+   <PARAMETER type="input">visited</PARAMETER>
+   <PARAMETER type="output">more_info</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">1.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">1.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">1.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">1.0</VALUE>
+      <VALUE parameter="more_info">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">1.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">1.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">1.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">1.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">1.0</VALUE>
+      <VALUE parameter="more_info">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">1.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">1.0</VALUE>
+      <VALUE parameter="edu">1.0</VALUE>
+      <VALUE parameter="first">1.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">1.0</VALUE>
+      <VALUE parameter="edu">1.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">1.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="bought">0.0</VALUE>
+      <VALUE parameter="edu">0.0</VALUE>
+      <VALUE parameter="first">0.0</VALUE>
+      <VALUE parameter="visited">0.0</VALUE>
+      <VALUE parameter="more_info">1.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+</DB>
+</MLDBIF>
+
+

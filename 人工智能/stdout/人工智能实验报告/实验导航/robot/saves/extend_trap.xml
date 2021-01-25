@@ -1,0 +1,195 @@
+<ROBOTXML VERSION="0.1">
+
+<!-- WORLD REPRESENTATION -->
+
+<WORLD>
+
+<!-- Locations -->
+<LOCATION>
+   <NAME>g1</NAME>
+   <PROPERTY>position=(57.26, -1.9166666)</PROPERTY>
+</LOCATION>
+
+<LOCATION>
+   <NAME>g2</NAME>
+   <PROPERTY>position=(-9.666667, -21.0)</PROPERTY>
+</LOCATION>
+
+<LOCATION>
+   <NAME>g3</NAME>
+   <PROPERTY>position=(-29.333334, -21.666666)</PROPERTY>
+</LOCATION>
+
+<LOCATION>
+   <NAME>g4</NAME>
+   <PROPERTY>position=(1.6666666, -21.0)</PROPERTY>
+</LOCATION>
+
+<!-- Walls -->
+<WALL>
+   <START>position=(-19.0, -11.666667)</START>
+   <END>position=(7.3333335, -11.333333)</END>
+</WALL>
+
+<WALL>
+   <START>position=(-18.0, 6.0)</START>
+   <END>position=(6.3333335, 6.3333335)</END>
+</WALL>
+
+<WALL>
+   <START>position=(-18.0, 6.0)</START>
+   <END>position=(-19.333334, 24.333334)</END>
+</WALL>
+
+<WALL>
+   <START>position=(-19.333334, 24.333334)</START>
+   <END>position=(30.333334, 24.333334)</END>
+</WALL>
+
+<WALL>
+   <START>position=(-19.0, -11.666667)</START>
+   <END>position=(-17.666666, -32.333332)</END>
+</WALL>
+
+<WALL>
+   <START>position=(-17.666666, -32.333332)</START>
+   <END>position=(32.333332, -31.666666)</END>
+</WALL>
+
+<WALL>
+   <START>position=(32.333332, -31.666666)</START>
+   <END>position=(30.333334, 24.333334)</END>
+</WALL>
+
+<!-- Robots -->
+<ROBOT>
+   <PROPERTY>position=(-60.666668, -21.0)</PROPERTY>
+   <DIRECTION>342.0</DIRECTION>
+</ROBOT>
+
+<!-- Plan -->
+<PLAN>
+   <LOC>g1</LOC>
+   <LOC>g2</LOC>
+   <LOC>g3</LOC>
+   <LOC>g4</LOC>
+</PLAN>
+
+</WORLD>
+
+<!-- PROLOG SECTION -->
+<!-- High Layer Controller -->
+
+<HIGHCONTROLLER>
+<LogicProgram>
+% High Layer Controller
+
+% assign(goal_pos,Coords,T) is true if we can assign the attribute goal_pos
+%   with value Coords at time T, ie. the last goal is reached at time T.
+assign(goal_pos,Coords,T) <-
+   arrived(T) &
+   not_complete(T) &
+   was(to_do,[goto(Loc)|_],_,T) &
+   at(Loc,Coords).
+
+% assign(to_do,R,T) is true if we can assign the attribute to_do
+%   with value R at time T, ie. the last goal is reached at time T.
+assign(to_do,R,T) <-
+   arrived(T) &
+   was(to_do,[_|R],_,T).
+</LogicProgram>
+</HIGHCONTROLLER>
+
+<!-- Middle Layer Controller -->
+
+<MIDDLECONTROLLER>
+<LogicProgram>
+% Middle Layer Controller
+
+% goal_direction(G,T) is true if at time T, the direction of the goal
+%    from the robot's current position is G degrees.
+goal_direction(G,T) <-
+   val(robot_pos,(X0,Y0),T) &
+   val(goal_pos,(X1,Y1),T) &
+   direction((X0,Y0),(X1,Y1),G).
+
+% goal_is(D,T) if the position of the goal is on the D-hand-side of the
+%    robot's current position at time T.  D is one of {left, right, straight}.
+goal_is(left,T) <-
+   goal_direction(G,T) &
+   val(compass,C,T) &
+   is_left(G,C).
+goal_is(straight,T) <-
+   goal_direction(G,T) &
+   val(compass,C,T) &
+   is_straight(G,C).
+goal_is(right,T) <-
+   goal_direction(G,T) &
+   val(compass,C,T) &
+   is_right(G,C).
+
+% steer(D,T) is true if the robot is to steer in the direction D at time T
+%     where D is one of {left, right, straight}.
+steer(D,T) <-
+   whisker_sensor(off,T) &
+   goal_is(D,T).
+
+steer(left,T) <-
+   whisker_sensor(on,T).
+
+% arrived(T) is true if the robot arrives at the current goal at time T.
+arrived(T) <-
+   was(goal_pos,Goal_Coords,_,T) &
+   robot_pos(Robot_Coords,T) &
+   close_enough(Goal_Coords,Robot_Coords).
+</LogicProgram>
+</MIDDLECONTROLLER>
+
+<!-- Environment -->
+
+<ENVIRONMENT>
+<LogicProgram>
+% Environment
+
+% whisker_sensor(S,T) is true if the whisker sensor's state is S at time T
+%    where S is one of {on, off}.
+whisker_sensor(on,T) <-
+    val(compass,D,T) &
+    val(robot_pos,(X,Y),T) &
+    get_whisker_direction(D,30,right,WD) &
+    seeblock(X,Y,12,WD).
+
+whisker_sensor(off,T) <-
+    val(compass,D,T) &
+    val(robot_pos,(X,Y),T) &
+    get_whisker_direction(D,30,right,WD) &
+    notseeblock(X,Y,12,WD).
+
+% compass_deriv(A,T) is true if the robot is to turn an angle of A degrees at time T
+compass_deriv(18,T) <-
+   steer(left,T).
+
+compass_deriv(-18,T) <-
+   steer(right,T).
+
+compass_deriv(0,T) <-
+   steer(straight,T).
+
+% assign(compass,C,T) is true if the attribute compass is assigned the value C at time T
+assign(compass,C,T) <-
+   was(compass,C1,T1,T) &
+   compass_deriv(DC,T) &
+   update_compass(T1,T,DC,C1,C).
+
+% assign(robot_pos,(X,Y),T) is true if the attribute robot_pos is assigned the value (X,Y) at time T
+assign(robot_pos,(X,Y),T) <-
+   was(robot_pos,(X1,Y1),T1,T) &
+   x_deriv(DX,T1) &
+   y_deriv(DY,T1) &
+   update_robot_pos(X1,Y1,DX,DY,T1,T,X,Y).
+
+% robot_pos(C,T) is true if the attribute robot_pos has value C at time T
+robot_pos(C,T) <- val(robot_pos,C,T).
+</LogicProgram>
+</ENVIRONMENT>
+</ROBOTXML>

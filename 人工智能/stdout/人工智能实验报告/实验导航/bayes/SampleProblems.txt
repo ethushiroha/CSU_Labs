@@ -1,0 +1,24 @@
+基本火警, 基本火警.xml
+雨伞问题, 雨伞问题.xml
+简单因果网, 简单因果网.xml
+电路诊断, 电路诊断.xml
+癌症诊断, 癌症诊断.xml
+小车购买决策, 小车购买决策.xml
+火警判断问题, 火警判断问题.xml
+复杂诊断问题, 复杂诊断问题.xml
+Basic Fire Alarm Problem, basicfirealarm.xml
+Decision Fire Alarm Problem, decisionfirealarm.xml
+New Decision Fire Alarm Problem, newdecisionfirealarm.xml
+Simple Graph 1, simp1.xml
+Car Buying Decision, carbuyer.xml
+Simple Umbrella Decision, umbrella.xml
+Car Starting Problem, car.xml
+Cancer Diagnosis Problem, cancer.xml
+Conditional Independence Quiz, independence.xml
+Electrical Diagnosis Problem, elec.xml
+Diagnosis Problem, diagnosis.xml
+Hailfinder Belief Net, hailfinder.xml
+
+
+
+

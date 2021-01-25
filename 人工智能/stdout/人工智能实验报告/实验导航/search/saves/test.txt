@@ -1,0 +1,38 @@
+% Auto-generated on Mon Jun 19 11:25:52 PDT 2000
+
+% Nodes
+% N: index, node_name, x_position, y_position, node_type, node_heuristics;
+N: 0, Node 0, -52.81842, -124.53889, START, 28.9;
+N: 1, Node 1, -83.95314, -48.43179, REGULAR, 23.7;
+N: 2, Node 2, -62.043526, 27.675306, REGULAR, 17.0;
+N: 3, Node 3, 32.513775, 79.566505, REGULAR, 10.0;
+N: 4, Node 4, 113.23343, 38.05355, REGULAR, 15.0;
+N: 5, Node 5, 52.11712, -48.43179, REGULAR, 21.1;
+N: 6, Node 6, -185.42926, -127.9983, REGULAR, 34.2;
+N: 7, Node 7, -169.28534, 166.05183, REGULAR, 18.4;
+N: 8, Node 8, 40.58574, 194.8803, GOAL, 0.0;
+N: 9, Node 9, -115.08786, -194.8803, REGULAR, 36.4;
+N: 10, Node 10, 84.404976, -137.2234, REGULAR, 29.0;
+N: 11, Node 11, 182.42169, -175.27696, REGULAR, 34.4;
+
+% Edges
+% E: from_node_index, to_node_index, edge_cost;
+E: 0, 1, 7.1;
+E: 0, 6, 11.5;
+E: 0, 10, 12.0;
+E: 1, 2, 6.9;
+E: 2, 3, 9.4;
+E: 3, 4, 7.9;
+E: 4, 5, 9.2;
+E: 5, 2, 11.9;
+E: 6, 7, 25.5;
+E: 6, 9, 8.4;
+E: 7, 8, 18.4;
+E: 10, 11, 9.1;
+E: 3, 5, 11.2;
+
+% Miscellaneous
+% M: name, value;
+M: HEURISTICS, AUTOMATIC;
+M: COSTS, AUTOMATIC;
+

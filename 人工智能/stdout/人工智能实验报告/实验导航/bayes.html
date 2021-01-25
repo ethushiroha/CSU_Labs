@@ -1,0 +1,232 @@
+<html>
+
+<!-- #BeginTemplate "../../框架系统/主框架页/框架网页模板主窗.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!-- #BeginEditable "doctitle" -->
+<title>新建网页 6</title>
+<!-- #EndEditable -->
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+<base target="_self">
+</head>
+
+<body topmargin="4" leftmargin="4" rightmargin="4" bottommargin="4" marginwidth="4" marginheight="4">
+
+<table cellpadding="0" cellspacing="0" width="781" height="237" bordercolorlight="#00FF00" border="2" bordercolor="#FFFFFF" bordercolordark="#00FF00">
+	<!-- MSTableType="layout" -->
+	<tr>
+	<td>　</td>
+		<td height="213" valign="top"><!-- #BeginEditable "T1" -->
+		<span lang="en-us">&nbsp;</span><div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN" lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>
+			<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN" lang="EN-US">&nbsp;&nbsp;
+			</span>
+			</font>
+			<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto">
+			<font size="2">&nbsp;</font></span><b><span style="font-family: 宋体">实验六&nbsp; 贝叶斯网络实验群</span></b></div> 
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、实验目的：</font></span></b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;熟悉和掌握了解不确定性推理的原理和特点，理解贝叶斯网络的推理原理。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、实验原理</font></span></b><span style="font-family: 宋体"><font size="2">:&nbsp;&nbsp;&nbsp;贝叶斯网络是一种模拟人类推过程中因果关系的不确定性处理模型，其</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">网络拓扑结构是一个有向无环图<span lang="EN-US">(DAG)</span>，它的节点用随机变量或命题来</font></span></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<span style="font-family: 宋体">
+<font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  
+标识，认为有直接关系的命题或变量则用弧来连接。</font></span><font size="2"><span style="font-family: 宋体">通过建立推理规则</span></font></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  
+知识库<span LANG="en-us">,</span>设置前提条件和证据可信度<span LANG="en-us">,</span>经过贝叶斯推理<span LANG="en-us">,</span>得到结论及其可信度。</span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、实验条件：</font></span></b></p> 
+	<div v:shape="_x0000_s1026">
+		<div class="O4" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:1296;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2">
+			<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+			<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			</font></span><span style="font-family: 宋体"><font size="2">
+			&nbsp;</font></span><b><span style="font-family: 宋体"><font size="2">贝叶斯网络实验</font></span></b><span style="font-family: 宋体"><font size="2">可视化实验环境:下图是该环境运行中的一个画面.</font></span></p>
+			<p class="MsoNormal" align="center" style="text-align: left; layout-grid-mode: char">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<span lang="EN-US" style="font-size: 12.0pt; font-family: 宋体"><![if !vml]>
+			<img border=0 width=553 height=408 
+src="../实验导航/Image/image006.jpg" v:shapes="_x0000_s1025"><![endif]></span></p>
+			<p align="left">
+			<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+text-shadow:auto;layout-flow:vertical"><font size="2">&nbsp;</font></span></div>
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、实验内容：</font></span></b></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+观察、验证一个选定的实验模块，分析其原理。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span lang="en-us">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span>
+</font><span style="font-family: 宋体">
+<font size="2">自己 
+建立一个简单的贝叶斯网络，包括建立推理规则知识库和前提条件的可信度。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+3</span><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体"><font size="2">实际运行它，并了解实现贝叶斯推理的主要技术 。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、实验步骤：</font></span></b></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF0000">&nbsp;</font> </font> 
+</span><span style="font-family: 宋体">
+<font size="2">建立推理规则知识库。将规则知识逐条加入规则知识库列表框中。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体">
+<font size="2">当规则知识库建立完成后，点击“建库完毕”按钮，表示用户所建立的规则知识库</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体">
+<font size="2">的大小已确定下来。规则知识库的最大规模不能超过<span lang="EN-US">100</span>条。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体">
+<font size="2">建立规则知识前提条件的可信度，用户可以从“证据可信度”的下拉列表框中挑选规</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体">
+<font size="2">则知识前提条件，输入相应的可信度。 </font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">4</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体">
+<font size="2">通过点击“下条证据可信度”按钮，将规则知识逐条加入前提条件可信度列表框。当</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体">
+<font size="2">规则知识前提条件的可信度建立完成后，点击“证据完毕”按钮。此时用户可以看到</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体">
+<font size="2">“开始推理”按钮被激活，则表示用户可以进行推理。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">5</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体">
+<font size="2">用户点击“开始推理”按钮后，可以看到生成的贝叶斯网络推理示意图以及在“推</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></font><span style="font-family: 宋体">
+<font size="2">理结果如下”文本框中最后结论的后验概率值。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、实验结论：</font></span></b><span style="font-family: 宋体"><font size="2">包括做实验的目的、方法、过程等，具体要写成实验报告<span LANG="en-us">,</span>如下图所示（见下页）。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+<b><font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 要求：</span></font></b></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">建立的知识库和规则库内容。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">贝叶斯推理网络及推理结果。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">试论述贝叶斯推理网络的推理机制及特点。</font></span></p>
+
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 黑体"><font size="2">附：</font></span></b><span style="font-family: 宋体; font-weight:700"><font size="2">贝叶斯</font></span><b><span style="font-family: 黑体"><font size="2">实验报告表:</font></span></b></p>
+	<table border="1" width="732" id="table3" height="403">
+		<tr>
+			<td width="91" align="left">
+				<span style="font-family: 宋体"><font size="2">姓名</font></span></td>
+			<td width="114" align="left">　</td>
+			<td width="266" colspan="2" align="left">
+				<span style="font-family: 宋体"><font size="2">指导老师</font></span></td>
+			<td width="135" align="left">
+				<span style="font-family: 宋体"><font size="2">日期</font></span></td>
+		</tr>
+		<tr>
+			<td width="91" height="46" align="left">
+				<span style="line-height: 150%; font-family: 宋体">
+				<font size="2">实验目的</font></span></td>
+			<td width="625" colspan="4" height="46" align="left">　</td>
+		</tr>
+		<tr>
+			<td width="91" height="60" align="left">　</td>
+			<td width="625" colspan="4" height="60" align="left">　</td>
+		</tr>
+		<tr>
+			<td width="91" align="left"><font size="2">对比</font></td>
+			<td width="310" colspan="2" align="left"><font size="2">实验一</font></td>
+			<td width="237" colspan="2" align="left"><font size="2">实验二</font></td>
+		</tr>
+		<tr>
+			<td width="91" height="68" align="left">
+			<span style="font-family: 宋体"><font size="2">贝叶斯网络图</font></span></td>
+			<td width="310" colspan="2" align="left">　</td>
+			<td width="237" colspan="2" align="left">　</td>
+		</tr>
+		<tr>
+			<td width="91" align="left">　</td>
+			<td width="310" colspan="2" align="left">　</td>
+			<td width="237" colspan="2" align="left">　</td>
+		</tr>
+		<tr>
+			<td width="91" height="34" align="left"><font size="2">观测结果</font></td>
+			<td width="310" colspan="2" align="left">　</td>
+			<td width="237" colspan="2" align="left">　</td>
+		</tr>
+		<tr>
+			<td width="91" align="left"><font size="2">学生结论</font></td>
+			<td width="310" colspan="2" align="left">　</td>
+			<td width="237" colspan="2" align="left">　</td>
+		</tr>
+	</table>
+    　
+	<p><!-- #EndEditable --></td>
+	</tr>
+	<tr>
+		<td valign="top" height="18" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="graphics" S-Theme="watermar" S-Type="arrows" B-Include-Home="FALSE" B-Include-Up="FALSE" startspan U-Page S-Target --><em>[导航栏特性在此站点中不可用]</em><!--webbot bot="Navigation" i-CheckSum="52766" endspan --></td>
+	</tr>
+	<tr>
+		<td width="74"></td>
+		<td height="2" width="699"></td>
+	</tr>
+</table>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

@@ -1,0 +1,5 @@
+Scheduling Problem, scheduling.txt
+Crossword Problem, crosswordProblem.txt
+Five Queens Problem, fiveIntegerQueens.txt
+Eight Queens Problem, eightQueens.txt
+Module 6 Problem, mod6cn1999.txt

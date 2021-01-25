@@ -1,0 +1,23 @@
+% Auto-generated on Thu Jul 04 12:20:23 PDT 2002
+
+%  'T:' Identifies the Attribute Title Line  
+%  'A:' Identifies Training Set Examples  
+%  'B:' Identifies Test Set Examples  
+
+T: price, maint-cost, doors, persons, trunk-size, safety, acceptable;
+A: vhigh, vhigh, 2, 2, small, low, unacc;
+A: vhigh, vhigh, 2, 2, small, med, unacc;
+A: med, vhigh, 3, 4, big, high, acc;
+A: med, vhigh, 3, more, small, high, acc;
+A: med, vhigh, 3, more, big, high, acc;
+A: med, low, 2, 4, small, high, good;
+A: med, low, 2, 4, big, high, vgood;
+B: vhigh, vhigh, 2, 2, small, high, unacc;
+B: vhigh, vhigh, 2, 2, med, low, unacc;
+B: vhigh, vhigh, 2, 4, big, low, unacc;
+B: vhigh, low, 5more, 4, big, high, acc;
+B: vhigh, low, 5more, more, small, high, acc;
+B: vhigh, low, 5more, more, med, med, acc;
+B: med, low, 2, more, big, high, vgood;
+B: med, low, 3, 4, small, high, good;
+B: low, low, 5more, more, big, high, vgood;

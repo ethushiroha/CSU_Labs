@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+
+<!-- DTD for the XMLBIF 0.3 format -->
+<!DOCTYPE BIF [
+<!ELEMENT BIF ( NETWORK )*>
+   <!ATTLIST BIF VERSION CDATA #REQUIRED>
+<!ELEMENT NETWORK ( NAME, ( PROPERTY | VARIABLE | DEFINITION )* )>
+<!ELEMENT NAME (#PCDATA)>
+<!ELEMENT VARIABLE ( NAME, ( OUTCOME |  PROPERTY )* ) >
+<!ATTLIST VARIABLE TYPE (nature|decision|utility) "nature">
+<!ELEMENT OUTCOME (#PCDATA)>
+<!ELEMENT DEFINITION ( FOR | GIVEN | TABLE | PROPERTY )* >
+<!ELEMENT FOR (#PCDATA)>
+<!ELEMENT GIVEN (#PCDATA)>
+<!ELEMENT TABLE (#PCDATA)>
+<!ELEMENT PROPERTY (#PCDATA)>
+]>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<VARIABLE TYPE="nature">
+   <NAME>outside_power</NAME>
+   <OUTCOME>on</OUTCOME>
+   <OUTCOME>off</OUTCOME>
+   <PROPERTY>position = (68.05991, -187.60344)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>cb1_st</NAME>
+   <OUTCOME>on</OUTCOME>
+   <OUTCOME>off</OUTCOME>
+   <PROPERTY>position = (-97.20979, -145.16936)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w3</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (-16.808315, -113.90211)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>cb2_st</NAME>
+   <OUTCOME>on</OUTCOME>
+   <OUTCOME>off</OUTCOME>
+   <PROPERTY>position = (162.9783, -141.81927)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w6</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (93.74371, -89.33498)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>p2</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (141.76125, 3.3500614)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>p1</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (47.95954, 0.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s1_st</NAME>
+   <OUTCOME>ok</OUTCOME>
+   <OUTCOME>upside_down</OUTCOME>
+   <OUTCOME>short</OUTCOME>
+   <OUTCOME>intermittent</OUTCOME>
+   <OUTCOME>broken</OUTCOME>
+   <PROPERTY>position = (-81.57617, -64.76787)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s1_pos</NAME>
+   <OUTCOME>up</OUTCOME>
+   <OUTCOME>down</OUTCOME>
+   <PROPERTY>position = (-156.39424, -62.534492)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w1</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (-121.77691, 10.050184)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w2</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (-43.60881, 7.8168116)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w0</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (-80.45949, 89.33498)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s2_st</NAME>
+   <OUTCOME>ok</OUTCOME>
+   <OUTCOME>upside_down</OUTCOME>
+   <OUTCOME>short</OUTCOME>
+   <OUTCOME>intermittent</OUTCOME>
+   <OUTCOME>broken</OUTCOME>
+   <PROPERTY>position = (-160.86098, 53.600983)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s2_pos</NAME>
+   <OUTCOME>up</OUTCOME>
+   <OUTCOME>down</OUTCOME>
+   <PROPERTY>position = (-161.97766, 113.90211)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>l1_lit</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (-67.059235, 187.60344)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>w4</NAME>
+   <OUTCOME>live</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (35.675983, 82.63486)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s3_pos</NAME>
+   <OUTCOME>up</OUTCOME>
+   <OUTCOME>down</OUTCOME>
+   <PROPERTY>position = (75.876724, 42.43411)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>s3_st</NAME>
+   <OUTCOME>ok</OUTCOME>
+   <OUTCOME>upside_down</OUTCOME>
+   <OUTCOME>short</OUTCOME>
+   <OUTCOME>intermittent</OUTCOME>
+   <OUTCOME>broken</OUTCOME>
+   <PROPERTY>position = (147.3447, 84.86822)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>l2_lit</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (70.29329, 176.43658)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>l2_st</NAME>
+   <OUTCOME>ok</OUTCOME>
+   <OUTCOME>intermittent</OUTCOME>
+   <OUTCOME>broken</OUTCOME>
+   <PROPERTY>position = (141.76125, 142.93596)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>l1_st</NAME>
+   <OUTCOME>ok</OUTCOME>
+   <OUTCOME>intermittent</OUTCOME>
+   <OUTCOME>broken</OUTCOME>
+   <PROPERTY>position = (-10.108192, 144.05264)</PROPERTY>
+</VARIABLE>
+
+
+<DEFINITION>
+   <FOR>outside_power</FOR>
+   <TABLE> 0.98 0.02</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>cb1_st</FOR>
+   <TABLE> 0.999 0.0010</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w3</FOR>
+   <GIVEN>outside_power</GIVEN>
+   <GIVEN>cb1_st</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>cb2_st</FOR>
+   <TABLE> 0.999 0.0010</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w6</FOR>
+   <GIVEN>outside_power</GIVEN>
+   <GIVEN>cb2_st</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>p2</FOR>
+   <GIVEN>w6</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>p1</FOR>
+   <GIVEN>w3</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s1_st</FOR>
+   <TABLE> 0.8 0.01 0.05 0.07 0.07</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s1_pos</FOR>
+   <TABLE> 0.5 0.5</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w1</FOR>
+   <GIVEN>w3</GIVEN>
+   <GIVEN>s1_st</GIVEN>
+   <GIVEN>s1_pos</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.6 0.4 0.4 0.6 0.7 0.3 0.01 0.99 0.02 0.98 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w2</FOR>
+   <GIVEN>w3</GIVEN>
+   <GIVEN>s1_st</GIVEN>
+   <GIVEN>s1_pos</GIVEN>
+   <TABLE> 1.0 0.0 0.2 0.8 0.8 0.2 1.0 0.0 0.6 0.4 0.5 0.5 0.8 0.2 0.1 0.9 0.2 0.8 0.01 0.99 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w0</FOR>
+   <GIVEN>w1</GIVEN>
+   <GIVEN>s2_st</GIVEN>
+   <GIVEN>s2_pos</GIVEN>
+   <GIVEN>w2</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.06 0.94 0.0 1.0 0.0 1.0 0.0 1.0 0.07 0.93 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s2_st</FOR>
+   <TABLE> 0.8 0.05 0.01 0.07 0.07</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s2_pos</FOR>
+   <TABLE> 0.5 0.5</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>l1_lit</FOR>
+   <GIVEN>w0</GIVEN>
+   <GIVEN>l1_st</GIVEN>
+   <TABLE> 1.0 0.0 0.7 0.3 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>w4</FOR>
+   <GIVEN>w3</GIVEN>
+   <GIVEN>s3_pos</GIVEN>
+   <GIVEN>s3_st</GIVEN>
+   <TABLE> 1.0 0.0 1.0 0.0 0.7 0.3 0.75 0.25 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s3_pos</FOR>
+   <TABLE> 0.8 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>s3_st</FOR>
+   <TABLE> 1.0 0.0 0.0 0.0 0.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>l2_lit</FOR>
+   <GIVEN>l2_st</GIVEN>
+   <GIVEN>w4</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.6 0.4 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>l2_st</FOR>
+   <TABLE> 1.0 0.0 0.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>l1_st</FOR>
+   <TABLE> 0.8 0.07 0.13</TABLE>
+</DEFINITION>
+
+
+</NETWORK>
+</BIF>
+

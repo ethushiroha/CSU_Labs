@@ -1,0 +1,140 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type=input>Known</PARAMETER>
+   <PARAMETER type=input>New</PARAMETER>
+   <PARAMETER type=input>Short</PARAMETER>
+   <PARAMETER type=input>Home</PARAMETER>
+   <PARAMETER type=output>Reads</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">0.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">0.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">1.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">1.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Known">0.0</VALUE>
+      <VALUE parameter="New">1.0</VALUE>
+      <VALUE parameter="Short">1.0</VALUE>
+      <VALUE parameter="Home">0.0</VALUE>
+      <VALUE parameter="Reads">1.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+

@@ -1,0 +1,15 @@
+% Auto-generated on Wed Jun 28 09:01:07 PDT 2000
+
+% Nodes
+% n:index/variable_name/x_position/y_position/domain_type/domainvalues;
+n:0/N0/-171/-103/INTEGER/1,2,3,4,5;
+n:1/N1/-79/123/INTEGER/1,2,3,4,5;
+n:2/N2/171/-123/INTEGER/1,2,3,4,5;
+
+% Edges
+% e:tail_index/head_index/constraint_information;
+e:0/1/<;
+e:2/1/>;
+e:2/0/!=;
+
+endConstraintGraph;

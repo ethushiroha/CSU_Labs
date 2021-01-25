@@ -1,0 +1,251 @@
+<html>
+
+<!-- #BeginTemplate "../../框架系统/主框架页/框架网页模板主窗.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!-- #BeginEditable "doctitle" -->
+<title>新建网页 2</title>
+<!-- #EndEditable -->
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+<base target="_self">
+</head>
+
+<body topmargin="4" leftmargin="4" rightmargin="4" bottommargin="4" marginwidth="4" marginheight="4">
+
+<table cellpadding="0" cellspacing="0" width="781" height="237" bordercolorlight="#00FF00" border="2" bordercolor="#FFFFFF" bordercolordark="#00FF00">
+	<!-- MSTableType="layout" -->
+	<tr>
+	<td>　</td>
+		<td height="213" valign="top"><!-- #BeginEditable "T1" -->
+		<span lang="en-us">&nbsp;</span><p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<b>
+			<span style="font-family: 宋体"><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	实验二 搜索策略实验群</font></span></b></p><p:colorscheme 
+ colors="#008000,#ffffff,#006600,#ffffb7,#99cc00,#00cc00,#99ff66,#ffff66"/>
+
+	<div v:shape="_x0000_s1026" class="O">
+		<div style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:216;mso-char-wrap:
+1;mso-kinsoku-overflow:1">
+			<span style="font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+font-size:16pt;text-shadow:auto"><b>&nbsp;</b></span><b><span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:16pt;
+text-shadow:auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span style="mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;text-shadow:auto; font-family:宋体">
+			搜索策略</span></b><span lang="EN-US" style="mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN">:</span><span lang="EN-US" style="font-family: Arial; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto; mso-fareast-language: ZH-CN" lang="EN-US">&nbsp;<font size="2">&nbsp;&nbsp;&nbsp; </font>
+			</span>
+			<span style="mso-spacerun: yes; mso-fareast-font-family: 宋体; mso-hansi-font-family: Arial; text-shadow: auto">
+			<font size="2">&nbsp;</font></span></div>
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、实验目的：</font></span></b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟悉和掌握启发式搜索的定义、估价函数和算法过程，并利用<span lang="EN-US">A*</span>算法求解</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+	</span></font><span style="font-family: 宋体"><font size="2"><span lang="EN-US">N</span>数码难题，理解求解流程和搜索顺序。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、实验原理</font></span></b><span style="font-family: 宋体"><font size="2">:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	A*算法是一种有序搜索算法，其特点在于对估价函数的定义上。对于一般</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span></font><span style="font-family: 宋体"><font size="2">的有序搜索，总是选择<span lang="EN-US">f</span>值最小的节点作为扩展节点。因此，<span lang="EN-US">f</span>是根据需</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span></font><span style="font-family: 宋体"><font size="2">要找到一条最小代价路径的观点来估算节点的，所以，可考虑每个节点<span lang="EN-US">n</span></font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span></font><span style="font-family: 宋体"><font size="2">的估价函数值为两个分量：从起始节点到节点<span lang="EN-US">n</span>的代价以及从节点<span lang="EN-US">n</span>到达目</font></span></p>
+		<p class="MsoNormal" style="layout-grid-mode: char">
+	<span LANG="en-us"><font SIZE="2"><span STYLE="font-family: 宋体">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span LANG="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+	</span></font><span style="font-family: 宋体"><font size="2">标节点的代价。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、实验条件：</font></span></b></p> 
+	<div v:shape="_x0000_s1026">
+		<div class="O4" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:1296;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2">
+			<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+			<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			</font></span><span style="font-family: 宋体"><font size="2">
+			搜索策略可视化实验环境:下图是该环境运行中的一个画面.</font></span></p>
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font> 
+			<span lang="EN-US" style="font-family: 宋体"><font size="2"><![if !vml]>
+			<img border=0 width=553 height=387 
+src="../实验导航/Image/image002.jpg" v:shapes="_x0000_s1026"><![endif]></font></span><![if !vml]><![endif]></p>
+			<p align="left">
+			<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+text-shadow:auto;layout-flow:vertical"><font size="2">&nbsp;</font></span></div>
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、实验内容：</font></span></b></p> 
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">
+	分别以各种搜索算法为例演示搜索过程。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">分析各种算法中的<span lang="EN-US">OPEN</span>表<span lang="EN-US">CLOSE</span>表的生成过程。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">分析估价函数对搜索算法的影响。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">4</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">分析某种启发式搜索算法的特点。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、实验步骤：</font></span></b></p> 
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">
+	开始演示。进入搜索策略演示程序，可从多种不同搜索算法选择装载相关源文件。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">选择不同的搜索算法，点击“<span lang="EN-US">autosearch</span>”  
+	观察搜索过程。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">设置不同属性，观察搜索过程的变化。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; text-indent: -22.5pt; layout-grid-mode: char; margin-left: 22.5pt">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-US" style="font-family: 宋体">4</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman" lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	&nbsp; </font></span><span style="font-family: 宋体"><font size="2"> 
+	观察运行过程和搜索顺序，理解启发式搜索的原理。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">5</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">算法流程的任一时刻的相关状态<span lang="EN-US">,</span>以算法流程高亮、<span lang="EN-US">open</span>表、<span lang="EN-US">close</span>表、节点静态图、&nbsp;&nbsp;&nbsp; </font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+	</span></font><span style="font-family: 宋体"><font size="2">当前扩展节点移动图等<span lang="EN-US">5</span>种形式在按钮上方同步显示<span lang="EN-US">,</span>便于深入学习理解搜索算法。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">6</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">根据程序运行过程画出搜索算法框图。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">7</span></font><span style="font-family: 宋体"><font size="2">、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	若要自己设计改进算法并运行，可参考帮助文件。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、实验结论：</font></span></b><span style="font-family: 宋体"><font size="2">包括做实验的目的、方法、过程等，具体要写成实验报告，如下图所示（见下页）。</font></span></p> 
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">启发式搜索算法<span lang="EN-US">A*</span>流程图和算法框图。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">
+	试分析估价函数的值对搜索算法速度的影响。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">根据<span lang="EN-US">A*</span>算法分析启发式搜索的特点。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 黑体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附：搜索策略实验报告表:</font></span></b></p> 
+		<p CLASS="MsoNormal" STYLE="layout-grid-mode: char"><font SIZE="2"><b>
+		<span STYLE="font-family: 黑体">&nbsp;</span></b></font></p>
+	<table border="1" width="736" id="table3" height="403">
+		<tr>
+			<td width="121">
+				<span style="font-family: 宋体"><font size="2">姓名</font></span></td>
+			<td width="12">　</td>
+			<td width="88">
+				<span style="font-family: 宋体"><font size="2">年级</font></span></td>
+			<td width="70">　</td>
+			<td width="141">
+				<span style="font-family: 宋体"><font size="2">指导老师</font></span></td>
+			<td width="6">　</td>
+			<td width="102">
+				<span style="font-family: 宋体"><font size="2">日期</font></span></td>
+			<td width="149">　</td>
+		</tr>
+		<tr>
+			<td width="121" height="46">
+				<span style="line-height: 150%; font-family: 宋体">
+				<font size="2">实验目的</font></span></td>
+			<td width="599" colspan="7" height="46">　</td>
+		</tr>
+		<tr>
+			<td width="121" height="60"><font size="2">搜索图</font></td>
+			<td width="599" colspan="7" height="60">　</td>
+		</tr>
+		<tr>
+			<td width="121"><font size="2">算法比较</font></td>
+			<td width="105" colspan="2"><font size="2">广度优先</font></td>
+			<td width="216" colspan="2">启发式(1)</td>
+			<td width="269" colspan="3">启发式(2)</td>
+		</tr>
+		<tr>
+			<td width="121" height="53">Open表</td>
+			<td width="105" colspan="2" height="53">　</td>
+			<td width="216" colspan="2" height="53">　</td>
+			<td width="269" colspan="3" height="53">　</td>
+		</tr>
+		<tr>
+			<td width="121" height="46">Close表</td>
+			<td width="105" colspan="2" height="46">　</td>
+			<td width="216" colspan="2" height="46">　</td>
+			<td width="269" colspan="3" height="46">　</td>
+		</tr>
+		<tr>
+			<td width="121"><font size="2">估价函数</font></td>
+			<td width="105" colspan="2">　</td>
+			<td width="216" colspan="2">　</td>
+			<td width="269" colspan="3">　</td>
+		</tr>
+		<tr>
+			<td width="121" height="50"><font size="2">搜索节点次序记录</font></td>
+			<td width="105" colspan="2" height="50">　</td>
+			<td width="216" colspan="2" height="50">　</td>
+			<td width="269" colspan="3" height="50">　</td>
+		</tr>
+		<tr>
+			<td width="121" height="34"><font size="2">观测结果</font></td>
+			<td width="105" colspan="2" height="34">　</td>
+			<td width="216" colspan="2" height="34">　</td>
+			<td width="269" colspan="3" height="34">　</td>
+		</tr>
+		<tr>
+			<td width="121"><font size="2">学生结论</font></td>
+			<td width="105" colspan="2">　</td>
+			<td width="216" colspan="2">　</td>
+			<td width="269" colspan="3">　</td>
+		</tr>
+	</table>
+          <p><!-- #EndEditable --></td>
+	</tr>
+	<tr>
+		<td valign="top" height="18" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="graphics" S-Theme="watermar" S-Type="arrows" B-Include-Home="FALSE" B-Include-Up="FALSE" startspan U-Page S-Target --><em>[导航栏特性在此站点中不可用]</em><!--webbot bot="Navigation" i-CheckSum="52766" endspan --></td>
+	</tr>
+	<tr>
+		<td width="74"></td>
+		<td height="2" width="699"></td>
+	</tr>
+</table>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

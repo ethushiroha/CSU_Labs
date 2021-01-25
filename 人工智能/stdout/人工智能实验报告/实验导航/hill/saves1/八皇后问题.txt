@@ -1,0 +1,53 @@
+% Auto-generated on Mon Jun 19 15:20:50 PDT 2000
+
+% Nodes
+% n:index/variable_name/x_position/y_position/domain_type/domainvalues;
+n:0/N0/-6/-340/INTEGER/1,2,3,4,5,6,7,8;
+n:1/N1/-297/-229/INTEGER/1,2,3,4,5,6,7,8;
+n:2/N2/-481/15/INTEGER/1,2,3,4,5,6,7,8;
+n:3/N3/-283/249/INTEGER/1,2,3,4,5,6,7,8;
+n:4/N4/5/340/INTEGER/1,2,3,4,5,6,7,8;
+n:5/N5/349/239/INTEGER/1,2,3,4,5,6,7,8;
+n:6/N6/481/17/INTEGER/1,2,3,4,5,6,7,8;
+n:7/N7/326/-248/INTEGER/1,2,3,4,5,6,7,8;
+
+% Edges
+% e:tail_index/head_index/constraint_information;
+e:0/1/QUEENS*1;
+e:0/2/QUEENS*2;
+e:0/3/QUEENS*3;
+e:0/4/QUEENS*4;
+e:0/5/QUEENS*5;
+e:0/6/QUEENS*6;
+e:0/7/QUEENS*7;
+e:1/2/QUEENS*1;
+e:1/3/QUEENS*2;
+e:1/4/QUEENS*3;
+e:1/5/QUEENS*4;
+e:1/6/QUEENS*5;
+e:1/7/QUEENS*6;
+e:2/3/QUEENS*1;
+e:2/4/QUEENS*2;
+e:2/5/QUEENS*3;
+e:2/6/QUEENS*4;
+e:2/7/QUEENS*5;
+e:3/4/QUEENS*1;
+e:3/5/QUEENS*2;
+e:3/6/QUEENS*3;
+e:3/7/QUEENS*4;
+e:4/5/QUEENS*1;
+e:4/6/QUEENS*2;
+e:4/7/QUEENS*3;
+e:5/6/QUEENS*1;
+e:5/7/QUEENS*2;
+e:6/7/QUEENS*1;
+
+endConstraintGraph;
+% 4 1
+% 3 3
+% 2 5
+% 1 7
+% 0 4
+% 7 2
+% 6 8
+% 5 6

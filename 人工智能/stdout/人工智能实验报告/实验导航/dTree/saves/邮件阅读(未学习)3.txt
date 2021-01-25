@@ -1,0 +1,97 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type=input>已知</PARAMETER>
+   <PARAMETER type=input>新内容</PARAMETER>
+   <PARAMETER type=input>短信</PARAMETER>
+   <PARAMETER type=output>阅读</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">0.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">0.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">0.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">0.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">0.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">0.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">0.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="已知">1.0</VALUE>
+      <VALUE parameter="新内容">1.0</VALUE>
+      <VALUE parameter="短信">1.0</VALUE>
+      <VALUE parameter="阅读">1.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+

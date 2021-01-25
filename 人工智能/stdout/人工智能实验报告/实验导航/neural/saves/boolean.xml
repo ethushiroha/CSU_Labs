@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<MLDBIF>
+<DB>
+
+<!-- Neural Network Definition -->
+<NETWORK>
+
+   <!-- Node Definitions -->
+
+   <NODE>
+      <NAME>Input 1</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-74.2622</XPOS>
+      <YPOS>-59.999928</YPOS>
+      <INDEX>0</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Input 2</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>71.31139</XPOS>
+      <YPOS>-59.999928</YPOS>
+      <INDEX>1</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Output (and)</NAME>
+      <WEIGHT>-15.0</WEIGHT>
+      <XPOS>-197.21288</XPOS>
+      <YPOS>59.999928</YPOS>
+      <INDEX>2</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Output (or)</NAME>
+      <WEIGHT>-5.0</WEIGHT>
+      <XPOS>1.4754081</XPOS>
+      <YPOS>59.999928</YPOS>
+      <INDEX>3</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>Output (nor)</NAME>
+      <WEIGHT>5.0</WEIGHT>
+      <XPOS>197.21288</XPOS>
+      <YPOS>59.999928</YPOS>
+      <INDEX>4</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+
+   <!-- Edge Definitions -->
+
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>10.0</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>10.0</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>-10.0</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>10.0</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>10.0</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>-10.0</WEIGHT>
+   </EDGE>
+
+</NETWORK>
+
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type="input">Input 1</PARAMETER>
+   <PARAMETER type="input">Input 2</PARAMETER>
+   <PARAMETER type="output">Output (and)</PARAMETER>
+   <PARAMETER type="output">Output (or)</PARAMETER>
+   <PARAMETER type="output">Output (nor)</PARAMETER>
+
+   <!-- Examples -->
+</EXAMPLES>
+
+</DB>
+</MLDBIF>
+
+

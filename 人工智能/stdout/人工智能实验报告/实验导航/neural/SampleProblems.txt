@@ -1,0 +1,9 @@
+多数赞成表决器, 多数赞成表决器.xml
+异或问题, 异或问题.xml
+布尔网(未经训练), 布尔网(未经训练).xml
+Mail Reading, MailReadingUnlearned.xml
+Mail Reading 2, MailReadingUnlearned2.xml
+Assignment 12a, ass12a.xml
+Assignment 12b, ass12b.xml
+Boolean Example, booleanUnlearned.xml
+

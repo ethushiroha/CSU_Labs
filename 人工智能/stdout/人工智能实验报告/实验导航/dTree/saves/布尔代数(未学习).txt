@@ -1,0 +1,42 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type=input>Input 1</PARAMETER>
+   <PARAMETER type=input>Input 2</PARAMETER>
+   <PARAMETER type=input>Output (and)</PARAMETER>
+   <PARAMETER type=input>Output (or)</PARAMETER>
+   <PARAMETER type=output>Output (nor)</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type=training>
+      <VALUE parameter="Input 1">0.0</VALUE>
+      <VALUE parameter="Input 2">0.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">0.0</VALUE>
+      <VALUE parameter="Output (nor)">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Input 1">0.0</VALUE>
+      <VALUE parameter="Input 2">1.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Input 1">1.0</VALUE>
+      <VALUE parameter="Input 2">0.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Input 1">1.0</VALUE>
+      <VALUE parameter="Input 2">1.0</VALUE>
+      <VALUE parameter="Output (and)">1.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+

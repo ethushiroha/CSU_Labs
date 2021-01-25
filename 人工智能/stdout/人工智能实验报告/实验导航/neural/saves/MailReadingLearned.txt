@@ -1,0 +1,33 @@
+% Auto-generated on Wed Jul 26 11:22:54 PDT 2000
+
+% Nodes
+% N: index, node_name, x_position, y_position, parameter_value;
+N: 0, Known, -139.0, -101.0, 0.0;
+N: 1, New, -38.0, -198.0, 0.0;
+N: 2, Short, 54.0, -199.0, 0.0;
+N: 3, Home, 150.0, -100.0, 1.0;
+N: 4, Hidden 1, 105.80634, 41.20028, -5.25;
+N: 5, Hidden 2, -92.1539, 41.20028, 0.493;
+N: 6, Reads, 11.0, 178.0, -2.98;
+
+% Edges
+% E: from_node_index, to_node_index, parameter_value;
+E: 0, 4, 1.98;
+E: 0, 5, -1.03;
+E: 1, 4, 1.86;
+E: 1, 5, -1.06;
+E: 2, 4, 4.71;
+E: 2, 5, -0.749;
+E: 3, 4, -0.389;
+E: 3, 5, 0.126;
+E: 4, 6, 6.88;
+E: 5, 6, -2.1;
+
+% Examples
+% T: input1's title, input2's title, ..., output1's title, output2's title, ...;
+% 	 note that the order must be input nodes in ascending index order, 
+% 	 followed by output nodes in ascending index order.
+% X: input1's value, input2's value, ..., output1's value, output2's value, ...;
+T: Known, New, Short, Home, Reads;
+% NO EXAMPLE
+

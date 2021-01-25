@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+
+<!-- DTD for the XMLBIF 0.3 format -->
+<!DOCTYPE BIF [
+<!ELEMENT BIF ( NETWORK )*>
+   <!ATTLIST BIF VERSION CDATA #REQUIRED>
+<!ELEMENT NETWORK ( NAME, ( PROPERTY | VARIABLE | DEFINITION )* )>
+<!ELEMENT NAME (#PCDATA)>
+<!ELEMENT VARIABLE ( NAME, ( OUTCOME |  PROPERTY )* ) >
+<!ATTLIST VARIABLE TYPE (nature|decision|utility) "nature">
+<!ELEMENT OUTCOME (#PCDATA)>
+<!ELEMENT DEFINITION ( FOR | GIVEN | TABLE | PROPERTY )* >
+<!ELEMENT FOR (#PCDATA)>
+<!ELEMENT GIVEN (#PCDATA)>
+<!ELEMENT TABLE (#PCDATA)>
+<!ELEMENT PROPERTY (#PCDATA)>
+]>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<VARIABLE TYPE="nature">
+   <NAME>Car Condition</NAME>
+   <OUTCOME>Peach</OUTCOME>
+   <OUTCOME>Lemon</OUTCOME>
+   <PROPERTY>position = (-100.78195, 175.447)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+   <NAME>Test 1</NAME>
+   <OUTCOME>NoTest</OUTCOME>
+   <OUTCOME>Steering</OUTCOME>
+   <OUTCOME>Fuel_Elect</OUTCOME>
+   <OUTCOME>Transmission</OUTCOME>
+   <PROPERTY>position = (-153.35493, -121.65142)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+   <NAME>Value</NAME>
+   <OUTCOME>Val</OUTCOME>
+   <PROPERTY>position = (165.75078, 18.950724)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+   <NAME>Buy It?</NAME>
+   <OUTCOME>DontBuy</OUTCOME>
+   <OUTCOME>Buy</OUTCOME>
+   <OUTCOME>BuyGuaranteed</OUTCOME>
+   <PROPERTY>position = (160.86028, -116.7609)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+   <NAME>Test 2</NAME>
+   <OUTCOME>NoTest</OUTCOME>
+   <OUTCOME>Differential</OUTCOME>
+   <PROPERTY>position = (-7.8622837, -175.447)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Test 2 Result</NAME>
+   <OUTCOME>NoResult</OUTCOME>
+   <OUTCOME>NoDefects</OUTCOME>
+   <OUTCOME>OneDefect</OUTCOME>
+   <PROPERTY>position = (19.035517, 18.950724)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Test 1 Result</NAME>
+   <OUTCOME>NoResult</OUTCOME>
+   <OUTCOME>NoDefects</OUTCOME>
+   <OUTCOME>OneDefect</OUTCOME>
+   <OUTCOME>TwoDefects</OUTCOME>
+   <PROPERTY>position = (-143.5739, 17.728094)</PROPERTY>
+</VARIABLE>
+
+
+<DEFINITION>
+   <FOR>Car Condition</FOR>
+   <TABLE> 0.8 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Test 1</FOR>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Value</FOR>
+   <GIVEN>Test 1</GIVEN>
+   <GIVEN>Test 2</GIVEN>
+   <GIVEN>Buy It?</GIVEN>
+   <GIVEN>Car Condition</GIVEN>
+   <TABLE> 0.0 0.0 60.0 -100.0 20.0 40.0 0.0 0.0 0.0 0.0 0.0 0.0 -9.0 -9.0 51.0 -109.0 11.0 31.0 0.0 0.0 0.0 0.0 0.0 0.0 -13.0 13.0 47.0 -113.0 7.0 27.0 0.0 0.0 0.0 0.0 0.0 0.0 -10.0 -10.0 50.0 -110.0 10.0 30.0 -14.0 -14.0 46.0 -114.0 6.0 26.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Buy It?</FOR>
+   <GIVEN>Test 2</GIVEN>
+   <GIVEN>Test 1</GIVEN>
+   <GIVEN>Test 2 Result</GIVEN>
+   <GIVEN>Test 1 Result</GIVEN>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Test 2</FOR>
+   <GIVEN>Test 1</GIVEN>
+   <GIVEN>Test 1 Result</GIVEN>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Test 2 Result</FOR>
+   <GIVEN>Test 1</GIVEN>
+   <GIVEN>Test 1 Result</GIVEN>
+   <GIVEN>Test 2</GIVEN>
+   <GIVEN>Car Condition</GIVEN>
+   <TABLE> 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 0.888 0.112 0.0 0.666 0.334 1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.444 0.556 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Test 1 Result</FOR>
+   <GIVEN>Test 1</GIVEN>
+   <GIVEN>Car Condition</GIVEN>
+   <TABLE> 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.9 0.1 0.0 0.0 0.4 0.6 0.0 0.0 0.8 0.2 0.0 0.0 0.1333 0.5333 0.3334 0.0 0.9 0.1 0.0 0.0 0.4 0.6 0.0</TABLE>
+</DEFINITION>
+
+
+</NETWORK>
+</BIF>
+

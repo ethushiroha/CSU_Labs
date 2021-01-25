@@ -1,0 +1,20 @@
+T: AGE, INCOME, STUD, CRED, BUYS;
+X: <=30, high, No, fair, No;
+X: <=30, high, No, excl, No;
+X: 31..40, high, No, fair, Yes;
+X:  >40, med, No, fair, Yes;
+X:  >40, low, Yes, fair, Yes;
+X:  >40, low, Yes, excl, No;
+X: 31..40, low, Yes, excl, Yes;
+X: <=30, med, No, fair, No;
+X: <=30, low, Yes, excl, Yes;
+X:  >40, med, Yes, fair, Yes;
+X: <=30, med, Yes, excl, Yes;
+X: 31..40, med, No, excl, Yes;
+X: 31..40, high, Yes, fair, Yes;
+X:  >40, med, No, excl, No;
+
+
+
+
+

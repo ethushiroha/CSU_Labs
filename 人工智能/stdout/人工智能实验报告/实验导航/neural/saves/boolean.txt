@@ -1,0 +1,26 @@
+% Auto-generated on Mon Aug 30 11:32:38 PDT 1999
+
+% Nodes
+% N: index, node_name, x_position, y_position, parameter_value;
+N: 0, Input 1, -37.75, -30.5, 0.0;
+N: 1, Input 2, 36.25, -30.5, 0.0;
+N: 2, Output (and), -100.25, 30.5, -15.0;
+N: 3, Output (or), 0.75, 30.5, -5.0;
+N: 4, Output (nor), 100.25, 30.5, 5.0;
+
+% Edges
+% E: from_node_index, to_node_index, parameter_value;
+E: 0, 2, 10.0;
+E: 0, 3, 10.0;
+E: 0, 4, -10.0;
+E: 1, 2, 10.0;
+E: 1, 3, 10.0;
+E: 1, 4, -10.0;
+
+% Examples
+% T: input1's title, input2's title, ..., output1's title, output2's title, ...;
+% 	 note that the order must be input nodes in ascending index order, 
+% 	 followed by output nodes in ascending index order.
+% X: input1's value, input2's value, ..., output1's value, output2's value, ...;
+T: Input 1, Input 2, Output (and), Output (or), Output (nor);
+% NO EXAMPLE

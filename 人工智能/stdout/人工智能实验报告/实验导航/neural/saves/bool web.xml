@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<MLDBIF>
+<DB>
+
+<!-- Neural Network Definition -->
+<NETWORK>
+
+   <!-- Node Definitions -->
+
+   <NODE>
+      <NAME>输入(节点1)</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>-130.34587</XPOS>
+      <YPOS>-98.603386</YPOS>
+      <INDEX>0</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输入(节点2)</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>126.413414</XPOS>
+      <YPOS>-96.65083</YPOS>
+      <INDEX>1</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输出 (与节点)</NAME>
+      <WEIGHT>0.1</WEIGHT>
+      <XPOS>-198.4036</XPOS>
+      <YPOS>97.770935</YPOS>
+      <INDEX>2</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输出 (或节点)</NAME>
+      <WEIGHT>0.2</WEIGHT>
+      <XPOS>2.427005</XPOS>
+      <YPOS>98.603386</YPOS>
+      <INDEX>3</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输出 (非节点)</NAME>
+      <WEIGHT>0.3</WEIGHT>
+      <XPOS>198.4036</XPOS>
+      <YPOS>97.770935</YPOS>
+      <INDEX>4</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+
+   <!-- Edge Definitions -->
+
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>0.4</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>0.1</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.2</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>0.3</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>0.4</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>0.5</WEIGHT>
+   </EDGE>
+
+</NETWORK>
+
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type="input">Input 1</PARAMETER>
+   <PARAMETER type="input">Input 2</PARAMETER>
+   <PARAMETER type="output">Output (and)</PARAMETER>
+   <PARAMETER type="output">Output (or)</PARAMETER>
+   <PARAMETER type="output">Output (nor)</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type="training">
+      <VALUE parameter="Input 1">0.0</VALUE>
+      <VALUE parameter="Input 2">0.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">0.0</VALUE>
+      <VALUE parameter="Output (nor)">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Input 1">0.0</VALUE>
+      <VALUE parameter="Input 2">1.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Input 1">1.0</VALUE>
+      <VALUE parameter="Input 2">0.0</VALUE>
+      <VALUE parameter="Output (and)">0.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="Input 1">1.0</VALUE>
+      <VALUE parameter="Input 2">1.0</VALUE>
+      <VALUE parameter="Output (and)">1.0</VALUE>
+      <VALUE parameter="Output (or)">1.0</VALUE>
+      <VALUE parameter="Output (nor)">0.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+</DB>
+</MLDBIF>
+
+

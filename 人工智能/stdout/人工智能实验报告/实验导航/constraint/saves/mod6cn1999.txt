@@ -1,0 +1,21 @@
+% Auto-generated on Tue Oct 12 13:00:42 PDT 1999
+
+% Nodes
+% n:index/variable_name/x_position/y_position/domain_type/domainvalues;
+n:0/A/-11.0/-202.50000000000006/INTEGER/1,2,3,4;
+n:1/B/-127.0/-132.5000000000001/INTEGER/1,2,3,4;
+n:2/C/77.0/18.499999999999886/INTEGER/1,2,3,4;
+n:3/D/137.0/-119.50000000000011/INTEGER/1,2,3,4;
+n:4/E/-93.0/18.499999999999886/INTEGER/1,2,3,4;
+
+% Edges
+% e:tail_index/head_index/constraint_information;
+e:3/2/<;
+e:0/3/<;
+e:0/1/!=;
+e:4/3/!=;
+e:4/2/!=;
+e:4/1/>;
+e:4/0/CUSTOM*0,1*0,3*1,0*1,2*2,1*2,3*3,0*3,2*;
+
+endConstraintGraph;

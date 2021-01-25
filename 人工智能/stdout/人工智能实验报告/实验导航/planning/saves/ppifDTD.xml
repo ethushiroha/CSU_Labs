@@ -1,0 +1,30 @@
+<!ELEMENT Action ( LogicProgram, Preconditions, AddList, DeleteList ) >
+
+<!ELEMENT AddList ( LogicProgram ) >
+
+<!ELEMENT Block EMPTY >
+<!ATTLIST Block colour NMTOKEN #REQUIRED >
+<!ATTLIST Block column NMTOKEN #REQUIRED >
+<!ATTLIST Block name NMTOKEN #REQUIRED >
+<!ATTLIST Block stackHeight NMTOKEN #REQUIRED >
+
+<!ELEMENT BlockWorld ( Block+ ) >
+
+<!ELEMENT DeleteList ( LogicProgram ) >
+
+<!ELEMENT Domain ( #PCDATA ) >
+
+<!ELEMENT Goals ( LogicProgram ) >
+
+<!ELEMENT InitialState ( LogicProgram, BlockWorld ) >
+
+<!ELEMENT LogicProgram ( #PCDATA ) >
+
+<!ELEMENT Name ( #PCDATA ) >
+
+<!ELEMENT PPIF ( Problem ) >
+<!ATTLIST PPIF version NMTOKEN #REQUIRED >
+
+<!ELEMENT Preconditions ( LogicProgram ) >
+
+<!ELEMENT Problem ( Name, Domain, InitialState, Goals, Action+ ) >

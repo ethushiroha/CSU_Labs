@@ -1,0 +1,18 @@
+T: price, maint-cost, doors, persons, trunk-size, safety, acceptable
+        
+vhigh, vhigh, 2, 2, small, low, unacc;
+vhigh, vhigh, 2, 2, small, med, unacc;
+med, vhigh, 3, 4, big, high, acc;
+med, vhigh, 3, more, small, high, acc;
+med, vhigh, 3, more, big, high, acc;
+med, low, 2, 4, small, high, good;
+med, low, 2, 4, big, high, vgood;
+vhigh, vhigh, 2, 2, small, high, unacc;
+vhigh, vhigh, 2, 2, med, low, unacc;
+vhigh, vhigh, 2, 4, big, low, unacc;
+vhigh, low, 5more, 4, big, high, acc;
+vhigh, low, 5more, more, small, high, acc;
+vhigh, low, 5more, more, med, med, acc;
+med, low, 2, more, big, high, vgood;
+med, low, 3, 4, small, high, good;
+low, low, 5more, more, big, high, vgood;

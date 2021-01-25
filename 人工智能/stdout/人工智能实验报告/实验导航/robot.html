@@ -1,0 +1,182 @@
+<html>
+
+<!-- #BeginTemplate "../../框架系统/主框架页/框架网页模板主窗.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!-- #BeginEditable "doctitle" -->
+<title>新建网页 9</title>
+<!-- #EndEditable -->
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+<base target="_self">
+</head>
+
+<body topmargin="4" leftmargin="4" rightmargin="4" bottommargin="4" marginwidth="4" marginheight="4">
+
+<table cellpadding="0" cellspacing="0" width="781" height="237" bordercolorlight="#00FF00" border="2" bordercolor="#FFFFFF" bordercolordark="#00FF00">
+	<!-- MSTableType="layout" -->
+	<tr>
+	<td>　</td>
+		<td height="213" valign="top"><!-- #BeginEditable "T1" -->
+		<span lang="en-us">&nbsp;</span><p class="MsoNormal" style="layout-grid-mode: char">
+	<b>
+				<span style="font-family: 宋体"><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实验九<span lang="EN-US">&nbsp;</span>机器人路径规划实验群</font></span></b></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、实验目的：</font></span></b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟悉和掌握机器人导航的信息处理流程，了解、比较基于行为主义和符</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span></font><span style="font-family: 宋体"><font size="2">号主义的人工智能方法在机器人中的应用特点和效果，以及结合两者的</font></span></p>
+		<p class="MsoNormal" style="layout-grid-mode: char">
+	<span lang="en-us"><font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+	</span></font><span style="font-family: 宋体"><font size="2">规划与决策方式。</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、实验原理</font></span></b><span style="font-family: 宋体"><font size="2">:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	模式识别(障碍\目标识别)和自动控制原理.</font></span></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、实验条件：</font></span></b></p> 
+	<div v:shape="_x0000_s1026">
+		<div class="O4" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:1296;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2">
+			<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+			<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-family: 宋体"><font size="2">机器人导航可视化实验环境:下图是该环境运行中的一个画面.图中兰色箭头代表一个</font></span></p>
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			</span></font><span style="font-family: 宋体"><font size="2">运动机器人.</font></span></p>
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<img border="0" src="../实验导航/Image/实验1.gif" width="500" height="393"></p>
+			<p align="left">
+			<span style="font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;
+text-shadow:auto;layout-flow:vertical"><font size="2">&nbsp;</font></span></div>
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、实验内容：</font></span></b></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</b>1. 简单地形导航;&nbsp;&nbsp;&nbsp;  
+	2.复杂地形导航;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.机器人陷阱;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	4 .复杂陷阱 等.</span></font></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、实验步骤：</font></span></b></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><b><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 验证性实验:</span></b></font></p> 
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">
+	进入实验环境，装载相关实验模块。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">选择不同的运行方式，观察运行过程。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">3</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">设置不同属性或参数，观察过程的变化。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; text-indent: -22.5pt; layout-grid-mode: char; margin-left: 22.5pt">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="EN-US" style="font-family: 宋体">4</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman" lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	&nbsp;&nbsp; </font></span><span style="font-family: 宋体"><font size="2"> 
+	作好实验记录,并作出相关分析。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; text-indent: -22.5pt; layout-grid-mode: char; margin-left: 22.5pt">
+	<font size="2"><span style="font-family: 宋体; font-weight: 700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 设计性实验:</span></font></p> 
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="EN-US">1</span></span><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span>
+	</font><font size="2"><span style="font-family: 宋体">
+	进入创建新图工作窗,创建标志物对象,并创建障碍物.</span></font></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	进入编辑窗,分别编辑环境描述代码、高层控制器、中层控制器代码和内建函数。</span></font></p>
+	<p class="MsoNormal" align="left" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span><span style="font-family: 宋体" lang="en-us">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</span><span style="font-family: 宋体">进入选项窗，编辑机器人属性和行进导航规划。</span></font></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">6</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	</font></span><span style="font-family: 宋体"><font size="2">
+	选择相应地运行方式，运行并调试，观察导航情况。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<font size="2">
+	<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+	<span lang="EN-US" style="font-family: 宋体">7</span></font><span style="font-family: 宋体"><font size="2">、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span> 
+	<font size="2"><span style="font-family: 宋体">作好实验记录，分析、修改、并得出结论。</span></font></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	　</p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、实验结论：</font></span></b><span style="font-family: 宋体"><font size="2">包括做实验的目的、方法、过程等，具体要写成实验报告，如下图所示（见下页）。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 黑体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附：导航实验报告表:</font></span></b></p> 
+		<p CLASS="MsoNormal" STYLE="layout-grid-mode: char"><font SIZE="2"><b>
+		<span STYLE="font-family: 黑体">&nbsp;&nbsp;&nbsp; </span></b></font></p>
+		<p CLASS="MsoNormal" STYLE="layout-grid-mode: char"><font SIZE="2"><b>
+		<span STYLE="font-family: 黑体">&nbsp;&nbsp;&nbsp; </span></b></font></p>
+		<p CLASS="MsoNormal" STYLE="layout-grid-mode: char">　</p>
+	<table border="1" width="752" id="table3" height="403">
+		<tr>
+			<td width="108" HEIGHT="51">
+				<span style="font-family: 宋体"><font size="2">&nbsp;姓名</font></span></td>
+			<td width="28" HEIGHT="51">　</td>
+			<td width="80" HEIGHT="51">
+				<span style="font-family: 宋体"><font size="2">年级</font></span></td>
+			<td width="135" HEIGHT="51">　</td>
+			<td width="88" HEIGHT="51">
+				<span style="font-family: 宋体"><font size="2">指导老师</font></span></td>
+			<td width="25" HEIGHT="51">　</td>
+			<td width="33" HEIGHT="51">
+				<span style="font-family: 宋体"><font size="2">日期</font></span></td>
+			<td width="206" HEIGHT="51">　</td>
+		</tr>
+		<tr>
+			<td width="108" height="46">
+				<span style="line-height: 150%; font-family: 宋体">
+				<font size="2">实验目的</font></span></td>
+			<td width="629" colspan="7" height="46">　</td>
+		</tr>
+		<tr>
+			<td width="108" height="17"><font size="2">对比</font></td>
+			<td width="253" colspan="3" height="17">&nbsp; 实验一</td> 
+			<td width="370" colspan="4" height="17">实验二</td>
+		</tr>
+		<tr>
+			<td width="108"><font size="2">实际导航路线</font></td>
+			<td width="253" colspan="3">　　</td>
+			<td width="370" colspan="4">　</td>
+		</tr>
+		<tr>
+			<td width="108" height="84"><font size="2">观测分析</font></td>
+			<td width="253" colspan="3">　</td>
+			<td width="370" colspan="4">　</td>
+		</tr>
+		<tr>
+			<td width="108"><font size="2">学生结论</font></td>
+			<td width="253" colspan="3">　</td>
+			<td width="370" colspan="4">　</td>
+		</tr>
+	</table>
+          　<p><b><font size="2">&nbsp;&nbsp;</font></b><!-- #EndEditable --></p>
+    </td>
+	</tr>
+	<tr>
+		<td valign="top" height="18" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="graphics" S-Theme="watermar" S-Type="arrows" B-Include-Home="FALSE" B-Include-Up="FALSE" startspan U-Page S-Target --><em>[导航栏特性在此站点中不可用]</em><!--webbot bot="Navigation" i-CheckSum="52766" endspan --></td>
+	</tr>
+	<tr>
+		<td width="74"></td>
+		<td height="2" width="699"></td>
+	</tr>
+</table>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

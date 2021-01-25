@@ -1,0 +1,24 @@
+% Auto-generated on Thu Aug 05 15:33:19 PDT 1999
+
+% Nodes
+% n:index/variable_name/x_position/y_position/domain_type/domainvalues;
+n:0/A1/-79.0/-256.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+n:1/A2/-245.0/-197.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+n:2/A3/228.0/-122.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+n:3/D1/-79.0/258.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+n:4/D2/-245.0/196.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+n:5/D3/228.0/118.5/STRING/add,ado,age,ago,aid,ail,aim,air,and,any,ape,apt,arc,are,ark,arm,art,ash,ask,auk,awe,awl,aye,bad,bag,ban,bat,bee,boa,ear,eel,eft,far,fat,fit,lee,oaf,rat,tar,tie;
+
+% Edges
+% e:tail_index/head_index/constraint_information;
+e:2/3/CROSSWORD*1*3;
+e:0/3/CROSSWORD*1*1;
+e:1/3/CROSSWORD*1*2;
+e:0/5/CROSSWORD*3*1;
+e:1/5/CROSSWORD*3*2;
+e:2/5/CROSSWORD*3*3;
+e:2/4/CROSSWORD*2*3;
+e:1/4/CROSSWORD*2*2;
+e:0/4/CROSSWORD*2*1;
+
+endConstraintGraph;

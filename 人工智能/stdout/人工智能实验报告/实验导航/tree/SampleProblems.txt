@@ -1,0 +1,10 @@
+动物识别系统规则库, 动物识别系统规则库.pl
+课程数据库, 课程数据库.pl
+电气系统, 电气系统.pl
+建筑平面图, 建筑平面图.pl
+操作列表, 操作列表.pl
+搜索节点图, 搜索节点图.pl
+数学公理, 数学公理.pl
+Arithmetic Axiomatization, number.pl
+A Biblical Family Database, simple.pl
+Times of The Day, times.pl

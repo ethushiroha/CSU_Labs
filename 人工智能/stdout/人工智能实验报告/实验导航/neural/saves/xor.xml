@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<MLDBIF>
+<DB>
+
+<!-- Neural Network Definition -->
+<NETWORK>
+
+   <!-- Node Definitions -->
+
+   <NODE>
+      <NAME>输入节点 0</NAME>
+      <WEIGHT>1.0</WEIGHT>
+      <XPOS>-147.0</XPOS>
+      <YPOS>-166.0</YPOS>
+      <INDEX>0</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输入节点 1</NAME>
+      <WEIGHT>0.0</WEIGHT>
+      <XPOS>87.0</XPOS>
+      <YPOS>-164.0</YPOS>
+      <INDEX>1</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>隐含节点 2</NAME>
+      <WEIGHT>-1.860358251583314</WEIGHT>
+      <XPOS>-121.0</XPOS>
+      <YPOS>-15.0</YPOS>
+      <INDEX>2</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>隐含节点 3</NAME>
+      <WEIGHT>0.6133102114971398</WEIGHT>
+      <XPOS>44.0</XPOS>
+      <YPOS>-14.0</YPOS>
+      <INDEX>3</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+   <NODE>
+      <NAME>输出节点 4</NAME>
+      <WEIGHT>-1.7231418715462172</WEIGHT>
+      <XPOS>-42.0</XPOS>
+      <YPOS>102.0</YPOS>
+      <INDEX>4</INDEX>
+      <FUNCTION>sigmoid</FUNCTION>
+   </NODE>
+
+   <!-- Edge Definitions -->
+
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>3.8761283847435277</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>0</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>-0.6898093907398503</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>2</ENDINDEX>
+      <WEIGHT>3.668227557342822</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>1</STARTINDEX>
+      <ENDINDEX>3</ENDINDEX>
+      <WEIGHT>-1.2160294604992612</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>2</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>6.006364895027907</WEIGHT>
+   </EDGE>
+   <EDGE>
+      <STARTINDEX>3</STARTINDEX>
+      <ENDINDEX>4</ENDINDEX>
+      <WEIGHT>-1.9613134774039747</WEIGHT>
+   </EDGE>
+
+</NETWORK>
+
+<!-- Example Database -->
+<EXAMPLES>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type="input">输入节点 0</PARAMETER>
+   <PARAMETER type="input">输入节点 1</PARAMETER>
+   <PARAMETER type="output">输出节点 4</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type="training">
+      <VALUE parameter="输入节点 0">0.0</VALUE>
+      <VALUE parameter="输入节点 1">0.0</VALUE>
+      <VALUE parameter="输出节点 4">0.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="输入节点 0">0.0</VALUE>
+      <VALUE parameter="输入节点 1">1.0</VALUE>
+      <VALUE parameter="输出节点 4">1.0</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type="training">
+      <VALUE parameter="输入节点 0">1.0</VALUE>
+      <VALUE parameter="输入节点 1">0.0</VALUE>
+      <VALUE parameter="输出节点 4">1.0</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+</DB>
+</MLDBIF>
+
+

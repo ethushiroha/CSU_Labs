@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+
+<!-- DTD for the XMLBIF 0.3 format -->
+<!DOCTYPE BIF [
+<!ELEMENT BIF ( NETWORK )*>
+   <!ATTLIST BIF VERSION CDATA #REQUIRED>
+<!ELEMENT NETWORK ( NAME, ( PROPERTY | VARIABLE | DEFINITION )* )>
+<!ELEMENT NAME (#PCDATA)>
+<!ELEMENT VARIABLE ( NAME, ( OUTCOME |  PROPERTY )* ) >
+<!ATTLIST VARIABLE TYPE (nature|decision|utility) "nature">
+<!ELEMENT OUTCOME (#PCDATA)>
+<!ELEMENT DEFINITION ( FOR | GIVEN | TABLE | PROPERTY )* >
+<!ELEMENT FOR (#PCDATA)>
+<!ELEMENT GIVEN (#PCDATA)>
+<!ELEMENT TABLE (#PCDATA)>
+<!ELEMENT PROPERTY (#PCDATA)>
+]>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<VARIABLE TYPE="nature">
+   <NAME>Alternator OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (21.071499, -100.59392)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Charging System OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (21.071499, -71.8528)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Battery Age</NAME>
+   <OUTCOME>new</OUTCOME>
+   <OUTCOME>old</OUTCOME>
+   <OUTCOME>very_old</OUTCOME>
+   <PROPERTY>position = (-59.403633, -97.71981)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Battery Voltage</NAME>
+   <OUTCOME>strong</OUTCOME>
+   <OUTCOME>weak</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (21.071499, -40.23757)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Main Fuse OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (-137.00465, -100.59392)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Distributer OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (-142.75287, -31.61523)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Voltage at Plug</NAME>
+   <OUTCOME>strong</OUTCOME>
+   <OUTCOME>weak</OUTCOME>
+   <OUTCOME>dead</OUTCOME>
+   <PROPERTY>position = (-65.151855, -40.23757)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Starter Motor OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (-122.63409, 74.726906)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Starter System OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (-33.53663, 74.726906)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Headlights</NAME>
+   <OUTCOME>bright</OUTCOME>
+   <OUTCOME>dim</OUTCOME>
+   <OUTCOME>off</OUTCOME>
+   <PROPERTY>position = (64.183174, 0.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Spark Plugs</NAME>
+   <OUTCOME>okay</OUTCOME>
+   <OUTCOME>too_wide</OUTCOME>
+   <OUTCOME>fouled</OUTCOME>
+   <PROPERTY>position = (-22.040178, -2.874112)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Spark Quality</NAME>
+   <OUTCOME>good</OUTCOME>
+   <OUTCOME>bad</OUTCOME>
+   <OUTCOME>very_bad</OUTCOME>
+   <PROPERTY>position = (-65.151855, 31.61523)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Car Cranks</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (41.190285, 100.59392)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Spark Timing</NAME>
+   <OUTCOME>good</OUTCOME>
+   <OUTCOME>bad</OUTCOME>
+   <OUTCOME>very_bad</OUTCOME>
+   <PROPERTY>position = (-142.75287, 34.489346)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Fuel System OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (64.183174, 34.489346)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Air Filter Clean</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (141.78418, 17.244673)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Air System OK</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (141.78418, 51.734013)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+   <NAME>Car Starts</NAME>
+   <OUTCOME>T</OUTCOME>
+   <OUTCOME>F</OUTCOME>
+   <PROPERTY>position = (141.78418, 100.59392)</PROPERTY>
+</VARIABLE>
+
+
+<DEFINITION>
+   <FOR>Alternator OK</FOR>
+   <TABLE> 0.997 0.0030</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Charging System OK</FOR>
+   <GIVEN>Alternator OK</GIVEN>
+   <TABLE> 0.5 0.5 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Battery Age</FOR>
+   <TABLE> 0.4 0.4 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Battery Voltage</FOR>
+   <GIVEN>Charging System OK</GIVEN>
+   <GIVEN>Battery Age</GIVEN>
+   <TABLE> 0.95 0.04 0.01 0.8 0.15 0.05 0.6 0.3 0.1 0.0080 0.3 0.692 0.0040 0.2 0.796 0.0020 0.1 0.898</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Main Fuse OK</FOR>
+   <TABLE> 0.99 0.01</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Distributer OK</FOR>
+   <TABLE> 0.99 0.01</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Voltage at Plug</FOR>
+   <GIVEN>Main Fuse OK</GIVEN>
+   <GIVEN>Distributer OK</GIVEN>
+   <GIVEN>Battery Voltage</GIVEN>
+   <TABLE> 0.9 0.05 0.05 0.1 0.1 0.8 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.9 0.1 0.0 0.1 0.9 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Starter Motor OK</FOR>
+   <TABLE> 0.995 0.0050</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Starter System OK</FOR>
+   <GIVEN>Main Fuse OK</GIVEN>
+   <GIVEN>Starter Motor OK</GIVEN>
+   <GIVEN>Battery Voltage</GIVEN>
+   <TABLE> 0.98 0.02 0.02 0.98 0.0 1.0 0.0 1.0 0.9 0.1 0.01 0.99 0.0 1.0 0.0 1.0 0.1 0.9 0.0050 0.995 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Headlights</FOR>
+   <GIVEN>Voltage at Plug</GIVEN>
+   <TABLE> 0.94 0.01 0.05 0.0 0.95 0.05 0.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Spark Plugs</FOR>
+   <TABLE> 0.7 0.1 0.2</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Spark Quality</FOR>
+   <GIVEN>Spark Plugs</GIVEN>
+   <GIVEN>Voltage at Plug</GIVEN>
+   <TABLE> 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Car Cranks</FOR>
+   <GIVEN>Starter System OK</GIVEN>
+   <TABLE> 0.8 0.2 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Spark Timing</FOR>
+   <GIVEN>Distributer OK</GIVEN>
+   <TABLE> 0.9 0.09 0.01 0.2 0.3 0.5</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Fuel System OK</FOR>
+   <TABLE> 0.9 0.1</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Air Filter Clean</FOR>
+   <TABLE> 0.9 0.1</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Air System OK</FOR>
+   <GIVEN>Air Filter Clean</GIVEN>
+   <TABLE> 0.9 0.1 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+   <FOR>Car Starts</FOR>
+   <GIVEN>Car Cranks</GIVEN>
+   <GIVEN>Fuel System OK</GIVEN>
+   <GIVEN>Spark Quality</GIVEN>
+   <GIVEN>Air System OK</GIVEN>
+   <GIVEN>Spark Timing</GIVEN>
+   <TABLE> 0.99 0.01 0.8 0.2 0.1 0.9 0.05 0.95 0.98 0.02 0.75 0.25 0.05 0.95 0.02 0.98 0.7 0.3 0.6 0.4 0.02 0.98 0.01 0.99 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.7 0.3 0.6 0.4 0.05 0.95 0.02 0.98 0.65 0.35 0.5 0.5 0.02 0.98 0.01 0.99 0.5 0.5 0.4 0.6 0.01 0.99 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0</TABLE>
+</DEFINITION>
+
+
+</NETWORK>
+</BIF>
+

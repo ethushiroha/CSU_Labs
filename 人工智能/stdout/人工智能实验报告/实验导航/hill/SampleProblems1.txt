@@ -1,0 +1,10 @@
+排定问题, 排定问题.txt
+字迷问题.txt
+五皇后问题, 五皇后问题.txt
+八皇后问题, 八皇后问题.txt
+
+Scheduling Problem, scheduling.txt
+Crossword problem, crosswordProblem.txt
+Five Queens Problem, fiveIntegerQueens.txt
+Eight Queens Problem, eightQueens.txt
+Module 6 Problem, mod6cn1999.txt

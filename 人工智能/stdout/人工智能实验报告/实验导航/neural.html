@@ -1,0 +1,206 @@
+<html>
+
+<!-- #BeginTemplate "../../框架系统/主框架页/框架网页模板主窗.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!-- #BeginEditable "doctitle" -->
+<title>新建网页 7</title>
+<!-- #EndEditable -->
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+<base target="_self">
+</head>
+
+<body topmargin="4" leftmargin="4" rightmargin="4" bottommargin="4" marginwidth="4" marginheight="4">
+
+<table cellpadding="0" cellspacing="0" width="781" height="237" bordercolorlight="#00FF00" border="2" bordercolor="#FFFFFF" bordercolordark="#00FF00">
+	<!-- MSTableType="layout" -->
+	<tr>
+	<td>　</td>
+		<td height="213" valign="top"><!-- #BeginEditable "T1" -->
+		<span lang="en-us">&nbsp;</span><p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+    　</p>
+		<p align="center"><b>
+			<span style="font-family: 宋体"><font size="4">实验七<span lang="EN-US">&nbsp;&nbsp;</span>神经网络实验群</font></span></b><p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+	<b><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 神经网络实验</span></b></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一、实验目的：</font></span></b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;理解反向传播网络的结构和原理，掌握反向传播算法对神经元的训练过程，了</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">解反向传播公式。通过构建<span lang="EN-US">BP</span>网络实例，熟悉前馈网络的原理及结构。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二、实验原理</font></span></b><span style="font-family: 宋体"><font size="2">:&nbsp;&nbsp;&nbsp;反向传播<span lang="EN-US">(BP)</span>算法是一种计算单个权值变化引起网络性能变化值的较为简单的</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">方法。<span lang="EN-US">BP</span>算法过程从输出节点开始，反向地向第一隐含层<span lang="EN-US">(</span>即最接近输入层的隐</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">含层<span lang="EN-US">)</span>传播由总误差引起的权值修正。<span lang="EN-US">BP</span>网络不仅含有输入节点和输出节点，而</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">且含有一层或多层隐<span lang="EN-US">(</span>层<span lang="EN-US">)</span>节点。输入信号先向前传递到隐节点，经过作用后，再</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><span style="font-family: 宋体"><font size="2">把隐节点的输出信息传递到输出节点，最后给出输出结果。</font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<span style="font-family: 宋体">
+	<b><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 三、实验条件：&nbsp;&nbsp; </font></b><font size="2">&nbsp;<span lang="zh-cn">神经网络可视化实验环境.</span>下图是该环境运行中的典型界面.</font></span></p> 
+	<div v:shape="_x0000_s1026">
+		<div class="O4" style="mso-line-spacing:&quot;80 20 0&quot;;mso-margin-left-alt:1296;
+mso-char-wrap:1;mso-kinsoku-overflow:1">
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			<font size="2">
+			<span lang="EN-US" style="font-family: 宋体">&nbsp;</span><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </span></font>
+			<span lang="EN-US" style="font-family: 宋体"><font size="2">
+			<img border="0" src="../实验导航/Image/image0071.jpg" width="563" height="306"></font></span></p>
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+			<img border="0" src="../实验导航/Image/image0072.jpg" width="470" height="236"></p>
+			<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p></div>
+	</div>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 四、实验内容：</font></span></b></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">通过<span lang="EN-US">BP</span>网络各项参数的不同设置，观察<span lang="EN-US">BP</span>算法的学习效果。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2">
+<span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+<span lang="EN-US" style="font-family: 宋体">2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">观察比较<span lang="EN-US">BP</span>网络  
+拓朴结构及其它各项参数变化对于训练结果的影响。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span lang="zh-cn">观察并分析不同训练数据对相同拓朴结构的BP网络建模的影响.</span></span></font></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span lang="zh-cn">用MLP模拟一个典型的非线性问题.</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 五、实验步骤：</font></span></b></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="zh-cn"> 
+	验证性实验:&nbsp;&nbsp; </span></b><span lang="zh-cn"> 
+	1、进入实验环境；2、选择相关的实验模块；3、设置相应地实验参数（如设</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<span lang="zh-cn"><font size="2"><span style="font-family: 宋体">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="zh-cn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+	</span></font>
+	<font size="2"><span lang="zh-cn" STYLE="font-family: 宋体">
+	置初始权值为随机值）；</span></font><span lang="zh-cn"><font size="2"><span style="font-family: 宋体"> 
+	4、选择实验运行方式；5、观测运行过程；6、修</span></font></span></p> 
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<span lang="zh-cn"><font size="2"><span style="font-family: 宋体">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="zh-cn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	改相应地参数重复第1~5步直到满意为止。</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<span lang="zh-cn"><font size="2"><span style="font-family: 宋体">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="zh-cn">&nbsp;<b>设计型实验：&nbsp; </b>1、进入实验环境；2、进入创建新模型工作窗；3、创建网络拓朴结构；</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	4<span lang="zh-cn">、设置相应的网络参数；5、输入相应的训练数据集；6、设置实验环境参数；</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<font size="2"><span style="font-family: 宋体" lang="zh-cn">&nbsp;</span><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 宋体" lang="zh-cn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+	7、选择相应的运行方式；8、观察实验过程；9、修改相关参数并重复</span><span style="font-family: 宋体">1~8<span lang="zh-cn">步</span></span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<span lang="zh-cn"><font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<span lang="zh-cn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+	</span></font>
+	<font size="2"><span lang="zh-cn" STYLE="font-family: 宋体">直至满意为止。</span></font></p>
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 六、实验结论：</font></span></b><span style="font-family: 宋体"><font size="2">包括做实验的目的、方法、过程等，具体要写成实验报告<span LANG="en-us">,</span>如下图所示（见下页</font></span><span LANG="en-us"><font SIZE="2"><span STYLE="font-family: 宋体">).</span></font></span></p> 
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<span lang="EN-US" style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-US" style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+1</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span lang="EN-US" style="font-family: 宋体"><font size="2">BP</font></span><span style="font-family: 宋体"><font size="2">网络的基本结构及<span lang="EN-US">BP</span>算法的训练过程。</font></span></p>
+<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<span lang="EN-US" style="font-family: 宋体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-US" style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+2</span></font><span lang="EN-US"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</font>
+</span><span style="font-family: 宋体"><font size="2">试述阈值函数和权值变化对<span lang="EN-US">BP</span>网络推理结果的影响。</font></span></p>
+	<p class="MsoNormal" align="left" style="text-align: left; layout-grid-mode: char">
+<font size="2"><span style="font-family: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+3<span lang="zh-cn">、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 训练数据集变化对网络训练结果的影响。</span></span></font></p> 
+
+	<p class="MsoNormal" style="layout-grid-mode: char">
+	<b><span style="font-family: 黑体"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附：神经网络实验报告表:</font></span></b></p> 
+	<table border="1" width="742" id="table3" height="403">
+		<tr>
+			<td width="149">
+				<span style="font-family: 宋体"><font size="2">姓名</font></span></td>
+			<td width="210" colspan="2">　</td>
+			<td width="239">
+				<span style="font-family: 宋体"><font size="2">指导老师:</font></span></td>
+			<td width="116">
+				<span style="font-family: 宋体"><font size="2">日期:</font></span></td>
+		</tr>
+		<tr>
+			<td width="149" height="46">
+				<span style="line-height: 150%; font-family: 宋体">
+				<font size="2">实验目的</font></span></td>
+			<td width="577" colspan="4" height="46">　</td>
+		</tr>
+		<tr>
+			<td width="149" height="60"><span lang="zh-cn"><font size="2">网络</font></span><p>
+			<font size="2"><span lang="zh-cn">拓朴</span>图</font></td>
+			<td width="209" height="60">　<p>　</p>
+			<p>　</p>
+			<p>　</td>
+			<td width="175" colspan="2" height="60">　</td>
+			<td width="116" height="60">　</td>
+		</tr>
+		<tr>
+			<td width="149" height="20"><font size="2">训练</font><p>
+			<font size="2">数据集</font></td>
+			<td width="209" height="20">　</td>
+			<td width="175" colspan="2" height="20">　</td>
+			<td width="116" height="20">　</td>
+		</tr>
+		<tr>
+			<td width="149" height="53"><font size="2">训练误差</font></td>
+			<td width="209" height="53">　</td>
+			<td width="175" colspan="2" height="53">　</td>
+			<td width="116" height="53">　</td>
+		</tr>
+		<tr>
+			<td width="149" height="46"><span lang="zh-cn"><font size="2">
+			模拟的问题或函数</font></span></td>
+			<td width="209" height="46">　</td>
+			<td width="175" colspan="2" height="46">　</td>
+			<td width="116" height="46">　</td>
+		</tr>
+		<tr>
+			<td width="149" height="34"><font size="2">观测结果</font></td>
+			<td width="209" height="34">　</td>
+			<td width="175" colspan="2" height="34">　</td>
+			<td width="116" height="34">　</td>
+		</tr>
+		<tr>
+			<td width="149"><font size="2">学生结论</font></td>
+			<td width="209">　</td>
+			<td width="175" colspan="2">　</td>
+			<td width="116">　</td>
+		</tr>
+	</table>
+          　
+	<p>　<!-- #EndEditable --></td>
+	</tr>
+	<tr>
+		<td valign="top" height="18" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<!--webbot bot="Navigation" S-Orientation="horizontal" S-Rendering="graphics" S-Theme="watermar" S-Type="arrows" B-Include-Home="FALSE" B-Include-Up="FALSE" startspan U-Page S-Target --><em>[导航栏特性在此站点中不可用]</em><!--webbot bot="Navigation" i-CheckSum="52766" endspan --></td>
+	</tr>
+	<tr>
+		<td width="74"></td>
+		<td height="2" width="699"></td>
+	</tr>
+</table>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

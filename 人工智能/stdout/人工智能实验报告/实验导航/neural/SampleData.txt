@@ -1,0 +1,9 @@
+Mail Reading, MailReadingUnlearned.xml
+Mail Reading 2, MailReadingUnlearned2.xml
+Assignment 12a, ass12a.xml
+Assignment 12b, ass12b.xml
+Boolean Example, booleanUnlearned.xml
+Electronics (raw data), AllElectronics.txt
+Small Car Database (raw data), testCar.txt
+LARGE Car Database (raw data), Car.txt
+
